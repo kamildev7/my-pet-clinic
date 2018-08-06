@@ -1,5 +1,6 @@
 package spring5test.mypetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import spring5test.mypetclinic.model.Pet;
 import spring5test.mypetclinic.services.PetService;
 
@@ -8,6 +9,7 @@ import java.util.Set;
 /**
  * @author kamildev7 on 2018-08-06.
  */
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override

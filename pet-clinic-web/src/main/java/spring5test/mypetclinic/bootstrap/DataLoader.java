@@ -1,13 +1,12 @@
 package spring5test.mypetclinic.bootstrap;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import spring5test.mypetclinic.model.Owner;
 import spring5test.mypetclinic.model.Vet;
 import spring5test.mypetclinic.services.OwnerService;
 import spring5test.mypetclinic.services.VetService;
-import spring5test.mypetclinic.services.map.OwnerServiceMap;
-import spring5test.mypetclinic.services.map.VetServiceMap;
 
 /**
  * @author kamildev7 on 2018-08-06.
@@ -18,9 +17,10 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    @Autowired
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

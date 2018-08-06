@@ -1,5 +1,6 @@
 package spring5test.mypetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import spring5test.mypetclinic.model.Owner;
 import spring5test.mypetclinic.services.OwnerService;
 
@@ -8,6 +9,7 @@ import java.util.Set;
 /**
  * @author kamildev7 on 2018-08-06.
  */
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
