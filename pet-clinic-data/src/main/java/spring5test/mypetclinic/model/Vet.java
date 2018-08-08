@@ -1,12 +1,13 @@
 package spring5test.mypetclinic.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
  * @author kamildev7 on 2018-08-05.
  */
 public class Vet extends Person {
-    private Set<Speciality> specialities;
+    private Set<Speciality> specialities = new HashSet<>();
 
     public Set<Speciality> getSpecialities() {
         return specialities;
