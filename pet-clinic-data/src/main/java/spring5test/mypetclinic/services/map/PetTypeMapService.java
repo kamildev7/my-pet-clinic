@@ -1,19 +1,18 @@
 package spring5test.mypetclinic.services.map;
 
 import org.springframework.stereotype.Service;
-import spring5test.mypetclinic.model.Pet;
-import spring5test.mypetclinic.services.PetService;
+import spring5test.mypetclinic.model.PetType;
+import spring5test.mypetclinic.services.PetTypeService;
 
 import java.util.Set;
 
 /**
- * @author kamildev7 on 2018-08-06.
+ * @author kamildev7 on 2018-08-08.
  */
 @Service
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
-
+public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
     @Override
-    public Set<Pet> findAll() {
+    public Set<PetType> findAll() {
         return super.findAll();
     }
 
@@ -23,17 +22,17 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetS
     }
 
     @Override
-    public void delete(Pet object) {
+    public void delete(PetType object) {
         super.delete(object);
     }
 
     @Override
-    public Pet save(Pet object) {
+    public PetType save(PetType object) {
         return super.save(object);
     }
 
     @Override
-    public Pet findById(Long id) {
+    public PetType findById(Long id) {
         return super.findById(id);
     }
 }
