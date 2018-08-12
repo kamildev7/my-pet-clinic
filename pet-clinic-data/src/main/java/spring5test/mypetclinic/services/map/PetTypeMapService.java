@@ -1,5 +1,6 @@
 package spring5test.mypetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import spring5test.mypetclinic.model.PetType;
 import spring5test.mypetclinic.services.PetTypeService;
@@ -10,6 +11,7 @@ import java.util.Set;
  * @author kamildev7 on 2018-08-08.
  */
 @Service
+@Profile({"default", "map"})
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
     @Override
     public Set<PetType> findAll() {
